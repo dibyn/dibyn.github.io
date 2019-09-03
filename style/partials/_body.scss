@@ -1,0 +1,355 @@
+#main {
+
+    //outline: none;
+    //padding-left: 249px;
+    //padding-right:15px;
+    /* width: 100%;*/
+    @media screen and (min-width: 768px) {
+        padding-left: 249px;
+        padding-right: 15px;
+    }
+    color: $ftclr;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: $primary-font;
+    }
+    p {
+        font-family: $secondary-font;
+    }
+    &.move-back {
+        //padding-left: 90px;
+        padding-left: 90px; //padding-left: 15px;
+        @media screen and (max-width: 768px) {
+            padding-left: 15px;
+        }
+    }
+    @media screen and (max-width:768px) {
+        padding-left: 15px;
+        &.move-front {
+            padding-left: 324px;
+            margin-left: 200px;
+        }
+    }
+
+    min-height: calc(100vh - 70px);
+
+}
+
+
+#main {
+    .breadcrmps {
+        .alert{
+            box-shadow: 0px 1px 7px #ccc;
+            transition: all 300ms linear;
+            //position: relative;
+        }
+        
+        .fa-home {
+            padding-right: 8px;
+        }
+        .fa-circle {
+            padding: {
+                right: 12px;
+                left: 12px;
+            }
+            font-size: 6px;
+        }
+        .dshbd {
+            color: #c9cbcf;
+        }
+    }
+    .wel-msg {
+        padding-top: 30px;
+        h1 {
+            font-family: $primary-font;
+        }
+        p {
+            font-family: $secondary-font;
+        }
+    }
+    .row {
+        /*.col-md-6{
+                background-color: $white;
+            }*/
+        .col-md-6 {
+            /*padding-left:15px;
+                    margin-right: 30px;
+                    padding: 30px;
+                    background-color: $white;*/
+            /*width: 240px;
+                    height: 140px;*/
+            /*margin: 0 auto;*/
+            .panel {
+                background-color: $white;
+                padding: 15px 15px;
+                margin-bottom:30px;
+            }
+            .media {
+                @media (max-width: 1300px) {
+                    margin-left: 20px;
+                    margin-top: -10px;
+                }
+                position: relative;
+                .donut-chart {
+                    /*margin-left: -50px;
+                        margin-top: 0px;*/
+                    margin-left: -50px;
+                    overflow: hidden;
+                    @media (max-width: 767px) {
+                        font-size: 28px;
+                        margin-left: -5px;
+                    }
+                }
+                .media-body {
+                    /*padding-left: 130px;
+                    padding-top: 20px;*/
+                    position: absolute;
+                    top: 15px;
+                    right:5px;
+                    
+                    /*text-align: center;*/
+                    @media (max-width: 1300px) {
+                        top: 10px;
+                        /*padding-left: -100px;*/
+                        /*top: -5px;*/
+                    }
+                    @media (max-width: 1060px) {
+                        top: 0px;
+                        /*padding-left: -100px;*/
+                        /*top: -5px;*/
+                    }
+                    @media (max-width: 991px) {
+                        top: 15px;
+                    }
+                    @media (max-width: 767px) {
+                        /*top: 120px;*/
+                        /*left: 280px;*/
+                        top: 50px;
+                    }
+                    @media (max-width: 320px) {
+                        /*top: 120px;*/
+                        /*left: 280px;*/
+                        left: 105px;
+                        top: 55px;
+                        h6 {
+                            font-size: 14px;
+                        }
+                        p {
+                            font-size: 10px;
+                        }
+                    }
+                    /*bottom: 40px;*/
+                    h4 {
+                        @media (max-width: 1300px) {
+                            font-size: 16px;
+                        }
+                        @media (max-width: 991px) {
+                            font-size: 28px;
+                        }
+                        @media (max-width: 460px) {
+                            font-size: 20px;
+                        }
+                        /*@media (max-width: 304px){
+                            font-size: 12px;
+                        }*/
+                    }
+                    .h6,
+                    .p {
+                        /*@media (max-width: 991px){
+                        }*/
+                        color: #36a2eb;
+                    }
+                    .hea-1,
+                    .par-1 {
+                        color: #ff9f40;
+                    }
+                    .hea-2,
+                    .par-2 {
+                        color: #c9cbcf;
+                    }
+                    .hea-3,
+                    .par-3 {
+                        color: #9966ff;
+                    }
+                    p {
+                        padding-left: 15px;
+                    }
+                }
+            }
+        }
+    }
+    .row{
+        
+        
+        .card-1{
+            .card{
+                .card-body{
+                    
+                    .card-text{
+                        [id='toggle-heart'] {
+                            position: absolute;
+                            left: -100vw;
+
+                            &:checked + label {
+                                color: #e2264d;
+                                will-change: font-size;
+                                animation: heart 1s cubic-bezier(.17, .89, .32, 1.49);
+                            }
+                        }
+
+                        [for='toggle-heart'] {
+                            align-self: center;
+                            color: #aab8c2;
+                            //font-size: 2em;
+                            cursor: pointer;
+                        }
+
+                        @keyframes heart {
+                            0%, 15% { font-size: 0; }
+                        }
+                        
+                        
+                    }
+                    
+                }
+            } 
+        }
+        .card-2{
+            .card{
+                .card-body{
+                    .card-text{
+
+                        [id='toggle-heart1'] {
+                            position: absolute;
+                            left: -100vw;
+
+                            &:checked + label {
+                                color: #e2264d;
+                                will-change: font-size;
+                                animation: heart 1s cubic-bezier(.17, .89, .32, 1.49);
+                            }
+                        }
+
+                        [for='toggle-heart1'] {
+                            align-self: center;
+                            color: #aab8c2;
+                            //font-size: 2em;
+                            cursor: pointer;
+                        }
+
+                        @keyframes heart {
+                            0%, 15% { font-size: 0; }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    
+    .activity-line {
+        margin-bottom: 30px;
+        background-color: $white;
+        padding: 30px;
+        font-family: $primary-font;
+        h5 {
+            border-bottom: 1px solid #CCC;
+            width: 100%;
+            float: left;
+            padding-bottom: 15px;
+        }
+        .lineChartExample {
+            &.lineChart {
+                margin: auto;
+            }
+            /*margin: auto;*/
+        }
+    }
+    .row {
+        .custom-chart1 {
+            .box1 {
+                margin-bottom: 30px;
+                h5 {
+                    border-bottom: 1px solid #CCC;
+                    width: 100%;
+                    float: left;
+                    padding-bottom: 15px;
+                }
+                .bar-today {
+                    /*display: block;
+                        position: relative;
+                        width: auto;
+                        overflow: hidden;
+                        padding-top: 60px;*/
+                    margin: auto;
+                    height: 372px;
+                    #barChart1 {
+                        @media screen and (max-width: 991px) {
+                            /*height: 352px !important;*/
+                        }
+                    }
+                }
+            }
+        }
+        .custom-tdo {
+            h5 {
+                border-bottom: 1px solid #CCC;
+                /*width:100%;
+                            float:left;*/
+                /*padding-bottom:15px;*/
+            }
+            .card-body1 {
+                li {
+                    /*list-style-type: none;*/
+                }
+            }
+        }
+    }
+    .row1 {
+        .mail-box {
+            thead,
+            tbody,
+            tr,
+            td,
+            th {
+                /*                    display:block;*/
+            }
+            .media {
+                @media screen and (max-width: 1110px) {
+                    .side-btn {
+                        display: none;
+                    }
+                    .media-body {
+                        //margin: auto;
+                    }
+                }
+                @media screen and (max-width: 504px) {
+                    p {
+                        display: none;
+                    }
+                }
+                .side-btn {
+                    .fa {
+                        color: #007bff;
+                    }
+                }
+                td {
+                    &.mailBox {
+                        padding-left: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    #main {
+        padding-top: 105px; //padding-left: 15x;
+        padding-right: 15px; //margin-left: -230px;
+    }
+}

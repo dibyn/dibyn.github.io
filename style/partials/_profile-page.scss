@@ -1,0 +1,43 @@
+.db{
+    display: block;
+}
+//.s1-left{
+//    max-width: 40px;
+//}
+
+.profiletimeline{
+    position: relative;
+    padding-left: 40px;
+    margin-right: 10px;
+    border-left: 1px solid rgba(120, 130, 140, 0.8);
+    margin-left: 30px;
+    .s1-item{
+        margin-top: 8px;
+        margin-bottom: 30px;
+        
+    }
+    .s1-left{
+        float: left;
+        margin-left: -60px;
+        z-index: 1;
+        margin-right: 15px;
+    }
+    .s1-date{
+       font-size: 12px;
+       color: #bc23c3;
+    }
+    .img-responsive{
+        width: 100%;
+        height: auto;
+        display: inline-block;
+    }
+    .fa-heart:hover{
+        color: #e2264d;
+    }
+    
+//    .b-r{
+//        border-right: 1px solid #787878;
+//    }
+    
+    
+}

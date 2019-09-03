@@ -1,0 +1,870 @@
+<!DOCTYPE html> 
+<html lang="en">
+   <head>
+     <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="MobileOptimized" content="320">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--    Title -->
+    <title>Fireboard</title>
+     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Condensed" rel="stylesheet">
+    <!-- FontAwesome -->
+    <script src="https://use.fontawesome.com/10be6d9e85.js"></script>
+    <link rel="shortcut icon" href="">
+    <!-- Vector Map CSS -->
+    <!--<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jvectormap/2.0.4/jquery-jvectormap.min.css">-->
+    <link href="js/dist/jqvmap.css" media="screen" rel="stylesheet" type="text/css">
+     <!-- Our CSS file -->
+    <link rel="stylesheet" type="text/css" href="style\style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+    <!--[if IE]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+   </head>
+   <body>
+       <header id="header" class="d-flex" style="position: fixed; z-index: 1000">
+           <div class="logo-container">
+               <a href="./index.html" class="logo">
+                   <img style="" class="single-logo" src="images/Logo/Dashboard_Logo.png" alt="fireboard">   
+                   <img class="in-relation"  src="images/logo/logo.png" alt="Fireboard">
+               </a>
+           </div>
+           <div class="nav" style="">
+               <button id="sidebar-toggle" style="outline: none;" class="sidebar-toggle">
+                   <i style= "color: #787878" class="fa fa-bars" ></i>
+               </button>
+               <button id="menu-toggle" style="color: #787878" class="menu-toggle">
+                   <i class="fa fa-bars" aria-hidden="true"></i>
+               </button>
+
+               <nav id="main-nav">
+                   <div class="sett-nav" style="">
+                       <ul class="icon-nav">
+                           <li class="profile-pic">
+                               <img class="side-bar-pic" src="images/normal-pic.png" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                               <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg" style="" aria-labelledby="navbarDropdownMenuLink">
+                                   <a class="dropdown-item" href="#"><i class="fa fa-user-md pr-2" aria-hidden="true"></i>
+                                       Profile</a>
+                                   <a class="dropdown-item" href="#"><i class="fa fa-calendar pr-2" aria-hidden="true"></i>
+                                       Calendar<span class="badge badge-pill badge-primary up ml-2">2</span></a>
+                                   <a class="dropdown-item" href="#"><i class="fa fa-inbox pr-2" aria-hidden="true"></i>Inbox<span class="badge badge-pill badge-primary up ml-2">8</span></a>
+                                   <a class="dropdown-item" href="#"><i class="fa fa-tasks pr-2"></i>Tasks<span class="badge badge-pill badge-warning up ml-2 text-white">18</span></a>
+                                   <a class="dropdown-item" href="#"><i class="fa fa-sign-out pr-2"></i>Log out</a>
+                               </div>
+                           </li>
+                           <li class="nav-item p-0 pt-3">
+
+
+                               <div class="search-bar">
+                                   <span class="fa-stack" style="position: absolute; padding-top: 3px;">
+                                       <i class="fa fa-circle fa-stack-2x text-warning fa-spin"></i>
+                                       <!--<i class="fa fa-search fa-stack-1x  fa-inverse"></i>-->
+                                   </span>
+                                   <form id="demo-2" style="position: relative;">
+                                       <input type="search" placeholder="Search">
+
+
+                                   </form>
+
+                               </div>
+
+                           </li>
+
+                           <li class="nav-item dropdown pill-ic">
+                               <a class="pill-ic" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                   <i class="fa fa-bell" aria-hidden="true">
+                                       <span class="badge badge-pill badge-primary up">3</span>
+                                   </i>
+                               </a>
+                               <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg primary-tt" style="" aria-labelledby="navbarDropdownMenuLink">
+                                   <a class="dropdown-item" style="" href="#"><i class="fa fa-user-circle" aria-hidden="true"></i>
+                                       New user registered<br /><i style="font-size:12px">1 min ago</i></a>
+                                   <a class="dropdown-item" href="#"><i class="fa fa-server" aria-hidden="true"></i>
+                                       Server overloaded<br /><i style="font-size:12px">7 mins ago</i></a>
+                                   <a class="dropdown-item" href="#"><i class="fa fa-user-circle" aria-hidden="true"></i>
+                                       User login<br /><i style="font-size:12px">55 mins ago</i></a>
+                                   <a class="dropdown-item" href="#"><i class="fa fa-user-circle" aria-hidden="true"></i>
+                                       New user registered<br /><i style="font-size:12px">1 hr ago</i></a>
+                                   <a class="dropdown-item" href="#"><i class="fa fa-user-circle" aria-hidden="true"></i>
+                                       New user registered<br /><i style="font-size:12px">23 hrs ago</i></a>
+                               </div>
+                           </li>
+                           <li class="nav-item dropdown pill-ic">
+                               <a class="pill-ic" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                   <i class="fa fa-envelope" aria-hidden="true">
+                                       <span class="badge badge-pill badge-warning up text-white">3</span>
+                                   </i>
+                               </a>
+                               <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg" style="" aria-labelledby="navbarDropdownMenuLink">
+                                   <a class="dropdown-item" href="./inbox.html">
+                                       <div class="media">
+                                           <img class="rounded-circle mt-2" style="width: 30px; height: 30px; object-fit: cover;" src="images/index.jpg" alt="Generic placeholder image">
+                                           <div class="media-body mt-2">
+                                               <p class="mt-0 mb-0">Gracia Mikel</p>
+                                               <i style="font-size: 12px">1 min ago</i>
+                                           </div>
+                                       </div>
+                                       <i style="font-size:12px">Dear Mikel, We love your work...</i>
+                                   </a>
+                                   <a class="dropdown-item" href="./inbox.html">
+                                       <div class="media">
+                                           <img class="rounded-circle  mt-2" style="width: 30px; height: 30px; object-fit: cover;" src="images/index.jpg" alt="Generic placeholder image">
+                                           <div class="media-body mt-2">
+                                               <p class="mt-0 mb-0">Gracia Mikel</p>
+                                               <i style="font-size: 12px">1 min ago</i>
+                                           </div>
+                                       </div>
+                                       <i style="font-size:12px">Dear Mikel, We love your work...</i> </a>
+                                   <a class="dropdown-item" href="./inbox.html">
+                                       <div class="media">
+                                           <img class="rounded-circle mt-2" style="width: 30px; height: 30px; object-fit: cover;" src="images/index.jpg" alt="Generic placeholder image">
+                                           <div class="media-body mt-2">
+                                               <p class="mt-0 mb-0">Gracia Mikel</p>
+                                               <i style="font-size: 12px">1 min ago</i>
+                                           </div>
+                                       </div>
+                                       <i style="font-size:12px">Dear Mikel, We love your work...</i> </a>
+                                   <a class="dropdown-item" href="./inbox.html">
+                                       <div class="media">
+                                           <img class="rounded-circle  mt-2" style="width: 30px; height: 30px; object-fit: cover;" src="images/index.jpg" alt="Generic placeholder image">
+                                           <div class="media-body mt-2" style="">
+                                               <p class="mt-0 mb-0">Gracia Mikel</p>
+                                               <i style="font-size: 12px">1 min ago</i>
+                                           </div>
+                                       </div>
+                                       <i style="font-size:12px">Dear Mikel, We love your work...</i> </a>
+                               </div>
+                           </li>
+                           <li class="nav-item dropdown pill-ic">
+                               <a class="pill-ic" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                   <i class="fa fa-calendar" aria-hidden="true">
+                                       <span class="badge badge-pill badge-danger up">3</span>
+                                   </i>
+                               </a>
+                               <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg" style="" aria-labelledby="navbarDropdownMenuLink">
+                                   <a class="dropdown-item" href="#">Dashboard project
+                                       <div class="progress">
+                                           <div class="progress-bar bg-warning" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                       </div><i><span style="font-size:12px">Deadline: Tomorrow</span></i>
+                                   </a>
+                                   <a class="dropdown-item" href="#">Dashboard project<div class="progress">
+                                       <div class="progress-bar bg-info" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
+                                       </div><i><span style="font-size:12px">Deadline: 2 Weeks </span></i>
+                                   </a>
+                                   <a class="dropdown-item" href="#">Dashboard project<div class="progress">
+                                       <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">100%</div>
+                                       </div><i><span style="font-size:12px">Done</span></i>
+                                   </a>
+                                   <a class="dropdown-item" href="#">Dashboard project<div class="progress">
+                                       <div class="progress-bar bg-success" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">85%</div>
+                                       </div><i><span style="font-size:12px">Done</span></i>
+                                   </a>
+                               </div>
+                           </li>
+                           <li class="nav-item dropdown display-none">
+                               <a href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                   <img src="images/normal-pic.png" alt="profile-pic" class="round-circle">
+                               </a>
+                               <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg" style="height: auto" aria-labelledby="navbarDropdownMenuLink">
+                                   <a class="dropdown-item" href="#"><i class="fa fa-user-md pr-2" aria-hidden="true"></i>
+                                       Change profile picture</a>
+                                   <a class="dropdown-item" href="#"><i class="fa fa-calendar pr-2" aria-hidden="true"></i>
+                                       Schedule Meeetings</a>
+                                   <a class="dropdown-item" href="#"><i class="fa fa-user pr-2" aria-hidden="true"></i>
+                                       Edit profile</a>
+
+                               </div>
+
+                           </li>
+                           <li class="nav-item dropdown display-none">
+                               <a class="chev" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                   <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                               </a>
+                               <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg" style="height: 174px" aria-labelledby="navbarDropdownMenuLink">
+                                   <a class="dropdown-item" href="#"><i class="fa fa-user-md pr-2" aria-hidden="true"></i>
+                                       Profile</a>
+                                   <a class="dropdown-item" href="#"><i class="fa fa-calendar pr-2" aria-hidden="true"></i>
+                                       Calendar<span class="badge badge-pill badge-primary up ml-2">2</span></a>
+                                   <a class="dropdown-item" href="#"><i class="fa fa-inbox pr-2" aria-hidden="true"></i>Inbox<span class="badge badge-pill badge-primary up ml-2">8</span></a>
+                                   <a class="dropdown-item" href="#"><i class="fa fa-tasks pr-2"></i>Tasks<span class="badge badge-pill badge-warning up ml-2 text-white">18</span></a>
+                                   <a class="dropdown-item" href="#"><i class="fa fa-sign-out pr-2"></i>Log out</a>
+                               </div>
+                           </li>
+                           <li class="nav-item display-none">
+                               <p>Hello! Johnny</p>
+                           </li>
+                       </ul>
+                   </div>
+                   <div class="icon-bar" style="height: 0px;">
+                       <img href="javascript:void(0);" class="mx-auto profile-piz rounded-circle" style="" src="images/normal-pic.png">
+                       <ul style="">
+                           <li class="nav-item dropdown">
+                               <a class="chev" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                   <i class="fa fa-futbol-o" aria-hidden="true"></i>
+
+                               </a>
+                               <!--Make a Human Robot-->
+
+                               <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg" style="" aria-labelledby="navbarDropdownMenuLink">
+                                   <a href="./buttons.html" class="dropdown-item">Button</a>
+                                   <a href="./progress-bar.html" class="dropdown-item">Progress Bar</a>
+                                   <a href="./typography.html" class="dropdown-item">Typography</a>
+                                   <a href="./grid.html" class="dropdown-item">Grid</a>
+                                   <a href="./notification-alerts.html" class="dropdown-item">Notification</a>
+                                   <a href="./cards.html" class="dropdown-item">Cards</a>
+                                   <a href="./tabs.html" class="dropdown-item">Tabs</a>
+                                   <a href="./models.html" class="dropdown-item">Models</a>
+                                   <a href="./lists.html" class="dropdown-item">Lists</a>
+                                   <a href="./tasks.html" class="dropdown-item">Tasks/To-do-list</a>
+                                   <a href="./pagination.html" class="dropdown-item">Pagination</a>
+                                   <a href="./media.html" class="dropdown-item">Media</a>
+                                   <a href="./pricing-table.html" class="dropdown-item">Pricing Table</a>
+                               </div>
+
+
+                           </li>
+                           <li class="nav-item dropdown">
+                               <a class="chev" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                   <i class="fa fa-inbox" aria-hidden="true"></i>
+
+                               </a>
+
+
+                               <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg" style="" aria-labelledby="navbarDropdownMenuLink">
+                                   <a href="./inbox.html" class="dropdown-item">Inbox</a>
+                                   <a href="./Compose-mail.html" class="dropdown-item">Compose Mail</a>
+
+                               </div>
+
+
+                           </li>
+                           <li class="nav-item dropdown">
+                               <a class="chev" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                   <i class="fa fa-th-list" aria-hidden="true"></i>
+
+                               </a>
+
+
+                               <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg" style="" aria-labelledby="navbarDropdownMenuLink">
+                                   <a href="./form-components.html" class="dropdown-item list-group-item-action">Form Component</a>
+                                   <a href="./advance-component.html" class="dropdown-item list-group-item-action">Advanced Component</a>
+                                   <a href="./form-wizard.html" class="dropdown-item list-group-item-action">Form Wizard</a>
+                                   <a href="./form-validation.html" class="dropdown-item list-group-item-action">Form Validation</a>
+
+                               </div>
+
+
+                           </li>
+                           <li class="nav-item dropdown">
+                               <a class="chev" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                   <i class="fa fa-table" aria-hidden="true"></i>
+
+                               </a>
+
+
+                               <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg" style="" aria-labelledby="navbarDropdownMenuLink">
+                                   <a href="./basic-table.html" class="dropdown-item">Basic Table</a>
+                                   <a href="./responsive-table.html" class="dropdown-item">Responsive Table</a>
+                                   <a href="./dynamic-table.html" class="dropdown-item">Dynamic Table</a>
+                                   <a href="./editable-table.html" class="dropdown-item">Editable Table</a>
+
+
+                               </div>
+
+
+                           </li>
+                           <li class="nav-item dropdown">
+                               <a class="chev" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                   <i class="fa fa-pie-chart" aria-hidden="true"></i>
+
+                               </a>
+
+
+                               <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg" style="" aria-labelledby="navbarDropdownMenuLink">
+                                   <a href="./morris-chart.html" class="dropdown-item">Morris Chart</a>
+                                   <a href="./chart-js.html" class="dropdown-item">Chart Js</a>
+                                   <a href="./x-chart.html" class="dropdown-item">X-Chart</a>
+
+                               </div>
+
+
+                           </li>
+                           <li class="nav-item dropdown">
+                               <a class="chev" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                   <i class="fa fa-calendar" aria-hidden="true"></i>
+
+                               </a>
+
+
+                               <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg" style="" aria-labelledby="navbarDropdownMenuLink">
+                                   <a href="./basic-calendar.html" class="dropdown-item">Basic Calender</a>
+                                   <a href="./full-calendar.html" class="dropdown-item">Full Calender</a>
+
+                               </div>
+
+
+                           </li>
+                           <li class="nav-item dropdown">
+                               <a class="chev" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                   <i class="fa fa-file" aria-hidden="true"></i>
+
+                               </a>
+
+
+                               <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg" style="" aria-labelledby="navbarDropdownMenuLink">
+                                   <a href="./invoice-page.html" class="dropdown-item">Invoice</a>
+                                   <a href="./login-page.html" class="dropdown-item">Login Page</a>
+                                   <a href="./register-page.html" class="dropdown-item">Register</a>
+                                   <a href="./recover-password.html" class="dropdown-item">Forget Password</a>
+                                   <a href="./lock-screen.html" class="dropdown-item">Lock Screen</a>
+                                   <a href="./404-error.html" class="dropdown-item">404 Error</a>
+                                   <a href="./500-error.html" class="dropdown-item">505 Error</a>
+                                   <a href="./blank-page.html" class="dropdown-item">Blank Page</a>
+                                   <a href="./FAQ.html" class="dropdown-item">FAQ</a>
+                                   <a href="./coming-soon.html" class="dropdown-item">Coming Soon</a>
+                                   <a href="./landing-page/index.html" class="dropdown-item">Landing Page</a>
+
+                               </div>
+
+
+                           </li>
+                           <li class="nav-item dropdown">
+                               <a class="chev" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                   <i class="fa fa-map" aria-hidden="true"></i>
+
+                               </a>
+
+
+                               <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg" style="" aria-labelledby="navbarDropdownMenuLink">
+
+
+                                   <a href="./google-map.html" class="dropdown-item">Google Maps</a>
+                                   <a href="./vector-maps.html" class="dropdown-item">Vector Maps</a>
+                               </div>
+
+
+                           </li>
+                           <li class="nav-item dropdown">
+                               <a class="chev" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                   <i class="fa fa-font-awesome" aria-hidden="true"></i>
+
+                               </a>
+
+
+                               <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg" style="" aria-labelledby="navbarDropdownMenuLink">
+                                   <a href="./weather-icon.html" class="dropdown-item">Weather Icons</a>
+                                   <a href="./font-awesome-icons.html" class="dropdown-item">Font Awesome</a>
+                                   <a href="./material-design.html" class="dropdown-item">Material Design</a>
+                                   <a href="./social-media-icons.html" class="dropdown-item">Social Media</a>
+
+
+
+                               </div>
+
+
+                           </li>
+                       </ul>
+                   </div>
+                   <!-- Main Icon Sidebar-->
+                   <div class="side-nav main-sidebar" style="">
+                       <div class="sidebar-wrapper">
+                           <div class="user-panel">
+                               <div class="photo">
+                                   <img src="images/Img-1.png">
+                               </div>
+                               <div class="info">
+                                   <ul>
+                                       <li class="profile-pic">
+                                           <img src="images/normal-pic.png">
+                                       </li>
+                                       <li class="name">
+                                           <h6>Johnny Doe</h6>
+                                           <p>Web Designer</p>
+                                       </li>
+                                   </ul>
+                               </div>
+                           </div>
+                           <ul class="sidebar-menu MainMenu">
+                               <div class="list-group panel" id="myList">
+                                   <a href="#ui" class="list-group-item border-0" data-toggle="collapse" data-parent="#MainMenu"> <i class="fa fa-futbol-o pr-2" aria-hidden="true"></i>UI<span class=""><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></span></a>
+                                   <div class="collapse" id="ui">
+                                       <a href="./buttons.html" class="list-group-item">Button</a>
+                                       <a href="./progress-bar.html" class="list-group-item">Progress Bar</a>
+                                       <a href="./typography.html" class="list-group-item">Typography</a>
+                                       <a href="./grid.html" class="list-group-item">Grid</a>
+                                       <a href="./notification-alerts.html" class="list-group-item">Notification</a>
+                                       <a href="./cards.html" class="list-group-item">Cards</a>
+                                       <a href="./tabs.html" class="list-group-item">Tabs</a>
+                                       <a href="./models.html" class="list-group-item">Models</a>
+                                       <a href="./lists.html" class="list-group-item">Lists</a>
+                                       <a href="./tasks.html" class="list-group-item">Tasks/To-do-list</a>
+                                       <a href="./pagination.html" class="list-group-item">Pagination</a>
+                                       <a href="./media.html" class="list-group-item">Media</a>
+                                       <a href="./pricing-table.html" class="list-group-item">Pricing Table</a>
+                                   </div>
+
+
+                                   <a href="#mail" class="list-group-item border-0" data-toggle="collapse" data-parent="#MainMenu"> <i class="fa fa-inbox pr-2" aria-hidden="true"></i>Mail<span class=""><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></span></a>
+                                   <div class="collapse" id="mail">
+                                       <a href="./inbox.html" class="list-group-item">Inbox</a>
+                                       <a href="./Compose-mail.html" class="list-group-item">Compose Mail</a>
+
+                                   </div>
+
+                                   <a href="./chat-room.html" class="list-group-item border-0"><i class="fa fa-comment pr-2" aria-hidden="true"></i>Chat Room<span class=""></span></a>
+
+                                   <a href="#forms" class="list-group-item list-group-item-action active border-0" data-toggle="collapse" data-parent="#MainMenu"> <i class="fa fa-th-list pr-2" aria-hidden="true"></i>Forms<span class=""><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></span></a>
+                                   <div class="collapse" id="forms">
+                                       <a href="./form-components.html" class="list-group-item list-group-item-action active">Form Component</a>
+                                       <a href="./advance-component.html" class="list-group-item list-group-item-action">Advanced Component</a>
+                                       <a href="./form-wizard.html" class="list-group-item list-group-item-action">Form Wizard</a>
+                                       <a href="./form-validation.html" class="list-group-item list-group-item-action">Form Validation</a>
+
+                                   </div>
+                                   <a href="#tables" class="list-group-item border-0" data-toggle="collapse" data-parent="#MainMenu"> <i class="fa fa-table pr-2" aria-hidden="true"></i>Tables<span class=""><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></span></a>
+                                   <div class="collapse" id="tables">
+                                       <a href="./basic-table.html" class="list-group-item">Basic Table</a>
+                                       <a href="./responsive-table.html" class="list-group-item">Responsive Table</a>
+                                       <a href="./dynamic-table.html" class="list-group-item">Dynamic Table</a>
+                                       <a href="./editable-table.html" class="list-group-item">Editable Table</a>
+
+                                   </div>
+
+                                   <a href="#charts" class="list-group-item border-0" data-toggle="collapse" data-parent="#MainMenu"> <i class="fa fa-pie-chart pr-2" aria-hidden="true"></i>Charts<span class=""><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></span></a>
+                                   <div class="collapse" id="charts">
+                                       <a href="./morris-chart.html" class="list-group-item">Morris Chart</a>
+                                       <a href="./chart-js.html" class="list-group-item">Chart Js</a>
+                                       <a href="./x-chart.html" class="list-group-item">X-Chart</a>
+
+
+                                   </div>
+
+                                   <a href="#calender" class="list-group-item border-0" data-toggle="collapse" data-parent="#MainMenu"> <i class="fa fa-calendar pr-2" aria-hidden="true"></i>Calendar<span class=""><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></span></a>
+                                   <div class="collapse" id="calender">
+
+                                       <a href="./basic-calendar.html" class="list-group-item">Basic Calender</a>
+                                       <a href="./full-calendar.html" class="list-group-item">Full Calender</a>
+
+
+                                   </div>
+
+                                   <a href="#pages" class="list-group-item border-0" data-toggle="collapse" data-parent="#MainMenu"> <i class="fa fa-file pr-2" aria-hidden="true"></i>Pages<span class=""><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></span></a>
+                                   <div class="collapse" id="pages">
+
+                                       <a href="./invoice-page.html" class="list-group-item">Invoice</a>
+                                       <a href="./login-page.html" class="list-group-item">Login Page</a>
+                                       <a href="./register-page.html" class="list-group-item">Register</a>
+                                       <a href="./recover-password.html" class="list-group-item">Forget Password</a>
+                                       <a href="./lock-screen.html" class="list-group-item">Lock Screen</a>
+                                       <a href="./404-error.html" class="list-group-item">404 Error</a>
+                                       <a href="./500-error.html" class="list-group-item">505 Error</a>
+                                       <a href="./blank-page.html" class="list-group-item">Blank Page</a>
+                                       <a href="./FAQ.html" class="list-group-item">FAQ</a>
+                                       <a href="./coming-soon.html" class="list-group-item">Coming Soon</a>
+                                       <a href="./landing-page/index.html" class="list-group-item">Landing Page</a>
+
+
+                                   </div>
+
+                                   <a href="#maps" class="list-group-item border-0" data-toggle="collapse" data-parent="#MainMenu"> <i class="fa fa-map pr-2" aria-hidden="true"></i>Maps<span class=""><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></span></a>
+                                   <div class="collapse" id="maps">
+
+                                       <a href="./google-map.html" class="list-group-item">Google Maps</a>
+                                       <a href="./vector-maps.html" class="list-group-item">Vector Maps</a>
+
+
+                                   </div>
+
+                                   <a href="#icons" class="list-group-item border-0" data-toggle="collapse" data-parent="#MainMenu"> <i class="fa fa-font-awesome pr-2" aria-hidden="true"></i>Icons<span class=""><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></span></a>
+                                   <div class="collapse" id="icons">
+
+                                       <a href="./weather-icon.html" class="list-group-item">Weather Icons</a>
+                                       <a href="./font-awesome-icons.html" class="list-group-item">Font Awesome</a>
+                                       <a href="./material-design.html" class="list-group-item">Material Design</a>
+                                       <a href="./social-media-icons.html" class="list-group-item">Social Media</a>
+
+
+                                   </div>
+
+                               </div>
+
+                           </ul>
+                       </div>
+                   </div>
+                   <!--Main Sidebar-->
+               </nav>
+           </div>
+       </header><!-- End of Header Section -->
+       
+       
+       <div id="main" style="">
+          <div class="container-fluid">
+              <div class="breadcrmps">
+                 <a href="/index.html"><i class="fa fa-home" aria-hidden="true"></i>
+                     <span>Home</span></a><i class="fa fa-circle" aria-hidden="true"></i><span class="dshbd">Models</span>
+              </div>
+               
+              <section class="content" style="background: white; padding: 30px; margin-top:30px;">
+
+
+                  <h4 class="border-bottom pb-2">Models</h4>
+                  <div class="row">
+                          <div class="col-12">
+                              <div class="card">
+                                  <div class="card-body">
+                                     
+                                      <h5 class="card-title border-bottom pb-2 mb-3">Static Models</h5>
+                                             <h6 class="card-subtitle">We ask that you include modal headers with dismiss actions whenever possible, or provide another explicit dismiss action.</h6>
+                                             
+                                       
+                                             <table class="table table-sm" style="">
+                                                 <thead class="thead-default">
+                                                     <tr>
+                                                         <th>Modal Type</th>
+                                                         <th>Try A Demo</th>
+                                                     </tr>
+                                                 </thead>
+                                                 <tbody>
+                                                     <tr>
+                                                         <td>
+                                                             Default
+                                                         </td>
+                                                         <td>
+                                                             <!-- Button trigger modal -->
+                                                             <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target="#exampleModal">
+                                                                 Demo Modal
+                                                             </button>
+
+                                                             <!-- Modal -->
+                                                             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
+                                                                 <div class="modal-dialog" role="document">
+                                                                     <div class="modal-content">
+                                                                         <div class="modal-header">
+                                                                             <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                 <span aria-hidden="true">×</span>
+                                                                             </button>
+                                                                         </div>
+                                                                         <div class="modal-body">
+                                                                             ...
+                                                                         </div>
+                                                                         <div class="modal-footer">
+                                                                             <button type="button" class="btn btn-secondary waves-effect waves-light" data-dismiss="modal">Close</button>
+                                                                             <button type="button" class="btn btn-primary waves-effect waves-light">Save changes</button>
+                                                                         </div>
+                                                                     </div>
+                                                                 </div>
+                                                             </div>
+                                                         </td>
+                                                     </tr>
+                                                     <tr>
+                                                         <td>
+                                                             Scroll
+                                                         </td>
+                                                         <td>
+                                                             <!-- Button trigger modal -->
+                                                             <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target="#exampleModalLong">
+                                                                 Demo Modal
+                                                             </button>
+
+                                                             <!-- Modal -->
+                                                             <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" style="display: none;" aria-hidden="true">
+                                                                 <div class="modal-dialog" role="document">
+                                                                     <div class="modal-content">
+                                                                         <div class="modal-header">
+                                                                             <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                                                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                 <span aria-hidden="true">×</span>
+                                                                             </button>
+                                                                         </div>
+                                                                         <div class="modal-body">
+                                                                             <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                                                                             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                                                                             <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                                                                             <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                                                                             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                                                                             <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                                                                             <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                                                                             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                                                                             <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                                                                             <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                                                                             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                                                                             <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                                                                             <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                                                                             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                                                                             <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                                                                             <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                                                                             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                                                                             <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                                                                         </div>
+                                                                         <div class="modal-footer">
+                                                                             <button type="button" class="btn btn-secondary waves-effect waves-light" data-dismiss="modal">Close</button>
+                                                                             <button type="button" class="btn btn-primary waves-effect waves-light">Save changes</button>
+                                                                         </div>
+                                                                     </div>
+                                                                 </div>
+                                                             </div>
+                                                         </td>
+                                                     </tr>
+                                                     <tr>
+                                                         <td>
+                                                             Tooltips and popovers
+                                                         </td>
+                                                         <td>
+                                                             <!-- Button trigger modal -->
+                                                             <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target="#exampleModalToolTip">
+                                                                 Demo Modal
+                                                             </button>
+
+                                                             <div class="modal fade" id="exampleModalToolTip" tabindex="-1" role="dialog" aria-labelledby="exampleModalToolTip" aria-hidden="true">
+                                                                 <div class="modal-dialog" role="document">
+                                                                     <div class="modal-content">
+                                                                         <div class="modal-header">
+                                                                             <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                                                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                 <span aria-hidden="true">×</span>
+                                                                             </button>
+                                                                         </div>
+                                                                         <div class="modal-body">
+                                                                             <h5>Popover in a modal</h5>
+                                                                             <p>This <a href="#" role="button" class="btn btn-secondary popover-test waves-effect waves-light" data-toggle="popover" title="" data-content="Popover body content is set in this attribute." data-original-title="Popover title">button</a> triggers a popover on click.</p>
+                                                                             <hr>
+                                                                             <h5>Tooltips in a modal</h5>
+                                                                             <p><a href="#" data-toggle="tooltip" title="" data-original-title="Default tooltip">This link</a> and <a href="#" data-toggle="tooltip" title="" data-original-title="Default tooltip">that link</a> have tooltips on hover.</p>
+                                                                         </div>
+                                                                         <div class="modal-footer">
+                                                                             <button type="button" class="btn btn-secondary waves-effect waves-light" data-dismiss="modal">Close</button>
+                                                                             <button type="button" class="btn btn-primary waves-effect waves-light">Save changes</button>
+                                                                         </div>
+                                                                     </div>
+                                                                 </div>
+                                                             </div>
+                                                         </td>
+                                                     </tr>
+                                                     <tr>
+                                                         <td>
+                                                             Using the grid
+                                                         </td>
+                                                         <td>
+                                                             <!-- Button trigger modal -->
+                                                             <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target="#exampleModalGrid">
+                                                                 Demo Modal
+                                                             </button>
+
+                                                             <div class="modal fade" id="exampleModalGrid" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" style="display: none;" aria-hidden="true">
+                                                                 <div class="modal-dialog" role="document">
+                                                                     <div class="modal-content">
+                                                                         <div class="modal-header">
+                                                                             <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                                                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                 <span aria-hidden="true">×</span>
+                                                                             </button>
+                                                                         </div>
+                                                                         <div class="modal-body">
+                                                                             <div class="container-fluid">
+                                                                                 <div class="row">
+                                                                                     <div class="col-md-4">.col-md-4</div>
+                                                                                     <div class="col-md-4 ml-auto">.col-md-4 .ml-auto</div>
+                                                                                 </div>
+                                                                                 <div class="row">
+                                                                                     <div class="col-md-3 ml-auto">.col-md-3 .ml-auto</div>
+                                                                                     <div class="col-md-2 ml-auto">.col-md-2 .ml-auto</div>
+                                                                                 </div>
+                                                                                 <div class="row">
+                                                                                     <div class="col-md-6 ml-auto">.col-md-6 .ml-auto</div>
+                                                                                 </div>
+                                                                                 <div class="row">
+                                                                                     <div class="col-sm-9">
+                                                                                         Level 1: .col-sm-9
+                                                                                         <div class="row">
+                                                                                             <div class="col-8 col-sm-6">
+                                                                                                 Level 2: .col-8 .col-sm-6
+                                                                                             </div>
+                                                                                             <div class="col-4 col-sm-6">
+                                                                                                 Level 2: .col-4 .col-sm-6
+                                                                                             </div>
+                                                                                         </div>
+                                                                                     </div>
+                                                                                 </div>
+                                                                             </div>
+                                                                         </div>
+                                                                         <div class="modal-footer">
+                                                                             <button type="button" class="btn btn-secondary waves-effect waves-light" data-dismiss="modal">Close</button>
+                                                                             <button type="button" class="btn btn-primary waves-effect waves-light">Save changes</button>
+                                                                         </div>
+                                                                     </div>
+                                                                 </div>
+                                                             </div>
+                                                         </td>
+                                                     </tr>
+                                                     <tr>
+                                                         <td>
+                                                             Sizes - Large
+                                                         </td>
+                                                         <td>
+                                                             <!-- Large modal -->
+                                                             <button class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target=".bd-example-modal-sizes">Demo Modal</button>
+
+                                                             <div class="modal fade bd-example-modal-sizes" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                                                 <div class="modal-dialog modal-lg">
+                                                                     <div class="modal-content">
+                                                                         <div class="modal-header">
+                                                                             <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                 <span aria-hidden="true">×</span>
+                                                                             </button>
+                                                                         </div>
+                                                                         <div class="modal-body">
+                                                                             ...
+                                                                         </div>
+                                                                         <div class="modal-footer">
+                                                                             <button type="button" class="btn btn-secondary waves-effect waves-light" data-dismiss="modal">Close</button>
+                                                                             <button type="button" class="btn btn-primary waves-effect waves-light">Save changes</button>
+                                                                         </div>
+                                                                     </div>
+                                                                 </div>
+                                                             </div>
+                                                         </td>
+                                                     </tr>
+                                                     <tr>
+                                                         <td>
+                                                             Sizes - Small
+                                                         </td>
+                                                         <td>
+                                                             <!-- Small modal -->
+                                                             <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target=".bd-example-modal-sm">Demo Modal</button>
+
+                                                             <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" style="display: none;" aria-hidden="true">
+                                                                 <div class="modal-dialog modal-sm">
+                                                                     <div class="modal-content">
+                                                                         <div class="modal-header">
+                                                                             <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                 <span aria-hidden="true">×</span>
+                                                                             </button>
+                                                                         </div>
+                                                                         <div class="modal-body">
+                                                                             ...
+                                                                         </div>
+                                                                         <div class="modal-footer">
+                                                                             <button type="button" class="btn btn-secondary waves-effect waves-light" data-dismiss="modal">Close</button>
+                                                                             <button type="button" class="btn btn-primary waves-effect waves-light">Save changes</button>
+                                                                         </div>
+                                                                     </div>
+                                                                 </div>
+                                                             </div>
+                                                         </td>
+                                                     </tr>
+                                                 </tbody>
+                                             </table>
+                                            
+                                         
+                                  
+                                  </div>
+                              </div>
+                          </div>
+                      </div> <!--END OF FIRST ROW-->
+                      
+                  <div class="row">
+                      <div class="col-12">
+                          <div class="card">
+                              <div class="card-body">
+                                  <h5 class="card-title border-bottom pb-2 mb-3">Modal based on trigger button</h5>
+                                  <!-- sample modal content -->
+                                  <div class="button-box">
+                                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1" data-whatever="@mdo">Open modal for @mdo</button>
+                                      <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal1" data-whatever="@fat">Open modal for @fat</button>
+                                      <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal1" data-whatever="@getbootstrap">Open modal for @getbootstrap</button>
+                                  </div>
+                                  <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" style="display: none;" aria-hidden="true">
+                                      <div class="modal-dialog" role="document">
+                                          <div class="modal-content">
+                                              <div class="modal-header">
+                                                  <h4 class="modal-title" id="exampleModalLabel1">New message</h4>
+                                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                              </div>
+                                              <div class="modal-body">
+                                                  <form>
+                                                      <div class="form-group">
+                                                          <label for="recipient-name" class="control-label">Recipient:</label>
+                                                          <input class="form-control" id="recipient-name1" type="text">
+                                                      </div>
+                                                      <div class="form-group">
+                                                          <label for="message-text" class="control-label">Message:</label>
+                                                          <textarea class="form-control" id="message-text1"></textarea>
+                                                      </div>
+                                                  </form>
+                                              </div>
+                                              <div class="modal-footer">
+                                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                  <button type="button" class="btn btn-primary">Send message</button>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <!-- /.modal -->
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                 
+                      
+                      
+                      
+                  
+                  
+
+                  <!-- Main row --> 
+              </section>
+        </div>
+        
+    </div>
+       
+       <footer class="footer">
+           <p class="border-left-0">©2018 Dashboard | MS Project
+               <!--<span class="float-right">
+<button class="btn" onclick="topFunction()" id="myBtn" title="Go to top">
+<i class="fa fa-chevron-circle-up fa-2x"></i>
+</button>
+</span> 
+</p>-->
+               <a href="#" class="back-to-top" style="display: inline;">
+
+                   <i class="fa fa-chevron-circle-up"></i>
+
+               </a>
+       </footer>
+        <!-- JavaScript Plugins -->
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+              <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sidebar/3.3.2/jquery.sidebar.min.js"></script>
+              <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" charset="utf-8"></script>
+              <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js" charset="utf-8"></script>
+              <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mapael/2.1.0/js/jquery.mapael.min.js" charset="utf-8"></script>
+              <script type="text/javascript" src="https://rawgit.com/neveldo/mapael-maps/master/world/world_countries.js" charset="utf-8"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+              <script src="js/Temp/Chart.js"></script>
+              <script async="js/Temp/analytics.js"></script>
+              <script src="js/Temp/utils.js"></script>
+              <script src="js/Temp/charts-custom.js"></script>
+              <script src="js/map.js"></script>
+              <script src="js/sidebar-toggle.js"></script>
+              <script src="js/chartjs.js"></script>
+        <script type="text/javascript">
+        </script>
+    </body>
+</html>

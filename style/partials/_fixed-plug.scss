@@ -1,0 +1,127 @@
+.fixed-plugin {
+    
+    
+    
+    
+    /*
+    input[type=checkbox]{
+        height: 0;
+        width: 0;
+        visibility: hidden;
+    }
+
+    label {
+        cursor: pointer;
+        text-indent: -9999px;
+        width: 200px;
+        height: 100px;
+        background: grey;
+        display: block;
+        border-radius: 100px;
+        position: relative;
+    }
+
+    label:after {
+        content: '';
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 90px;
+        height: 90px;
+        background: #fff;
+        border-radius: 90px;
+        transition: 0.3s;
+    }
+
+    input:checked + label {
+        background: #bada55;
+    }
+
+    input:checked + label:after {
+        left: calc(100% - 5px);
+        transform: translateX(-100%);
+    }
+
+    label:active:after {
+        width: 130px;
+    }
+*/
+    // centering
+    .custom-control{
+        color: $ftclr;
+    }
+    h4{
+        border-bottom: 1px solid #ccc;
+    }
+    #plug {
+        background: none;
+        margin: 0;
+        
+        position: fixed;
+        bottom: 0;
+        right: -15px;
+        top: 100px;
+        width: 70px;
+        height: 70px;
+        z-index: 100;
+        display: none;
+        text-decoration: none; //color: #787878;
+        //background-color: #ff9000;
+    }
+    #plug .fa-cog {
+        font-size: 25px;
+    }
+
+    .sidenav {
+        border-radius: 5%;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: white;
+        opacity: 1;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 10px;
+        box-shadow: 0px 1px 7px #ccc;
+
+
+    }
+
+    .sidenav a {
+        padding: 8px 8px 8px 30px;
+        text-decoration: none;
+        font-size: 16px;
+        color: $white;
+        display: block;
+        transition: 0.3s;
+
+    }
+
+    .sidenav a:hover {
+        color: $brand-color;
+    }
+
+    .sidenav .closebtn {
+        color: #787878;
+        position: absolute;
+        top: 0px;
+        right: 20px;
+        font-size: 24px;
+        margin-left: 50px;
+    }
+
+    @media screen and (max-height: 450px) {
+        .sidenav {
+            padding-top: 15px;
+        }
+        .sidenav a {
+            font-size: 18px;
+        }
+    }
+
+}
+
+

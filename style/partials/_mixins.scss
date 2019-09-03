@@ -1,0 +1,28 @@
+@mixin border-radius($v){
+    -webkit-border-radius: $v;
+    -moz-border-radius: $v;
+    border-radius: $v;
+}
+
+//Utilities 
+
+@import "mixins/transparency";
+@import "mixins/vendor-prefixes";
+
+
+//Components
+
+@import "mixins/buttons";
+@import "mixins/inputs";
+@import "mixins/labels";
+@import "mixins/tabs";
+
+@import "mixins/navbars";
+@import "mixins/icons";
+@import "mixins/social-buttons";
+
+@import "mixins/morphing-buttons";
+
+@import "mixins/cards";
+
+@import "mixins/chartist";

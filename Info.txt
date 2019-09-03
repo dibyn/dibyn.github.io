@@ -1,0 +1,11 @@
+Most of all things: http://en.wikipedia.org
+JavaScript http://en.wikipedia.org/wiki/Javascript
+JQuery complete documentation. Retrieved from http://jquery.com
+Blogs related to dashboard:
+•	https://medium.com/bootstrapdash-blog/13-free-back-end-admin-panel-templates-546b25de9829
+•	https://medium.com/bootstrapdash-blog/how-to-create-an-admin-panel-with-a-bootstrap-template-36798deecd79
+•	http://www.uxforthemasses.com/dashboard-design/
+•	https://www.sisense.com/blog/4-design-principles-creating-better-dashboards/
+•	https://www.geckoboard.com/blog/building-great-dashboards-6-golden-rules-to-successful-dashboard-design/
+•	https://www.invisionapp.com/blog/designing-better-dashboards/
+•	https://www.toptal.com/designers/data-visualization/dashboard-design-best-practices

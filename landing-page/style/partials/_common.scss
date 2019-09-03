@@ -1,0 +1,118 @@
+*{
+	margin: 0;
+	padding: 0;
+    outline: none;
+    
+} //Reset CSS Simple
+html,body{
+	
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+   //background-color: #eceef2;
+   //min-width: 400px;
+    font-family: $secondary-font;
+    color: #5f5f52;
+    
+    h1,h2,h3,h4,h5,h6{
+        font-family: $primary-font;
+    }
+    p{
+        font-family: $secondary-font;
+    }
+}	
+
+.border {
+    border: 1px solid #dee2e6 !important;
+}
+.radius{
+    border-radius: 20px;
+}
+
+ul, ol, li{
+	list-style-type: none
+}
+li{
+    //display:inline;
+}
+
+a{
+	outline: none;
+    //color: $ftclr;
+    font-size: 16px;
+//    padding-right: 10px
+}
+
+a:hover{
+    outline: none;
+    //color: $white;
+    text-decoration: none;
+}
+
+
+
+
+.control {
+    display: block;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    
+    cursor: pointer;
+    font-size: 16px;
+}
+.control input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+.control__indicator {
+    position: absolute;
+    top: 4px;
+    left: 0px;
+    height: 16px;
+    width: 16px;
+    background: $white;
+    border: 1px solid #ccc !important;
+}
+//.control--radio .control__indicator {
+//    border-radius: 50%;
+//}
+.control:hover input ~ .control__indicator,
+.control input:focus ~ .control__indicator {
+    background: $ftclr;
+}
+.control input:checked ~ .control__indicator {
+    background: #2aa1c0;
+}
+.control:hover input:not([disabled]):checked ~ .control__indicator,
+.control input:checked:focus ~ .control__indicator {
+    background: #0e647d;
+}
+.control input:disabled ~ .control__indicator {
+    background: #e6e6e6;
+    opacity: 0.6;
+    pointer-events: none;
+}
+.control__indicator:after {
+    content: '';
+    position: absolute;
+    display: none;
+}
+.control input:checked ~ .control__indicator:after {
+    display: block;
+}
+.control--checkbox .control__indicator:after {
+    left: 5px;
+    top: 1px;
+    width: 6px;
+    height: 12px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+.control--checkbox input:disabled ~ .control__indicator:after {
+    border-color: $ftclr;
+}
+

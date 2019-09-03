@@ -1,0 +1,33 @@
+#main{
+    .container-fluid{
+        .row{
+            .col-12{
+                .card{
+                    .card-body{
+                        .row{
+                            .col-lg-12{
+                                .row{
+                                    .col-md-3{
+                                        .pricing-box:hover{
+                                            box-shadow: 0px 1px 10px #aaaaaa;
+                                            
+                                            
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+.pricing-box:hover{
+    box-shadow: 0px 1px 10px #aaaaaa;
+    .list-group-item:hover{
+        box-shadow: 0px 1px 10px #aaaaaa;
+    }
+}

@@ -1,0 +1,48 @@
+//
+//    Read more:
+//    https://google.github.io/material-design-icons/#what-are-material-icons
+//
+
+@import url(//fonts.googleapis.com/icon?family=Material+Icons);
+
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+
+
+
+
+// lazy dog – one class only 
+.material-icons {
+    margin-top:24px;
+    white-space: normal;
+    //color: #666; 
+    letter-spacing: 4px;
+    line-height: 28px;
+}
+
+// just some styling
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
